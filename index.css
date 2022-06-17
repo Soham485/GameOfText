@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
-
+/* Use :root vars */
+:root {
+  --white: #fff;
+  --black: #001;
+  --bg-color: #cdcdcd;
+  --boxshadow-color: #36454f;
+}
 *,
 *::before,
 *::after {
@@ -15,16 +21,16 @@ body {
   align-items: center;
   width: 100vw;
   height: 40vw;
-  background-color: #cdcdcd;
+  background-color: var(--bg-color);
 }
 
 .container {
   width: 800px;
   max-width: 80%;
-  background-color: #fff;
+  background-color: var(--white);
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 3px 2px 0px #36454f;
+  box-shadow: 3px 2px 0px ;
 }
 
 .btn-grid {
@@ -38,9 +44,9 @@ body {
   border: 1px solid #675979;
   border-radius: 5px;
   padding: 5px 10px;
-  color: white;
+  color: var(--white);
 }
 
 .btn:hover {
-  border-color: black;
+  border-color: var(--black);
 }
