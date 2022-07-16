@@ -67,19 +67,43 @@ const textNodes = [
   },
   {
     id: 3,
-    text: "People tell you that this is a planet which is just like an RPG and you make some friends!",
+    text: "You learn that you're in a world where almost anything is possible, where magic is common, and spells are used normally",
     options: [
       {
-        text: "Explore the world",
-        setState: { knowledge: true },
+        text: "You explore the world since you're fascinated and very curious about this fantasy world",
+        setState: { caution: true },
         nextText: 4,
       },
-      {
-        text: "You sit on a bench on a park",
-        nextText: 5,
-      },
+      { text: "You go to a school to start studying about magic", nextText: 5 },
     ],
   },
-]
+  {
+    id: 4,
+    text: "You learn that this world... is going to be in attack with another world from a different realm...",
+    options: [
+      {
+        text: "You get ready to fight since you want to be a hero",
+        requiredState: (currentState) => currentState.sword,
+        nextText: 6,
+      },
+      { text: "You hide", nextText: 7 },
+    ],
+  },
+  {
+    id: 5,
+    text: "There is an emergency announcement at the school...",
+    options: [{ text: "...", nextText: 4 }],
+  },
+  {
+    id: 6,
+    text: "You WIN the fight and become a HERO!",
+    options: [{ text: "Play again", nextText: 0 }],
+  },
+  {
+    id: 7,
+    text: "The monsters from the other world win and kill everyone including you",
+    options: [{ text: "Restart", nextText: 0 }],
+  },
+];
 
 startGame();
